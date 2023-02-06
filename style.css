@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Cabin';
     background-color: #758190;
@@ -14,13 +18,31 @@ body {
     background-color: lightblue;
     padding: 1%;
     align-items: center;
+    justify-content: space-between;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    padding: 0 5vw;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    width: 90vw;
+    margin: auto;
 }
 
 .stats-container {
     display: flex;
+    align-items: center;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -37,10 +59,19 @@ body {
 }
 
 #games-container {
+    width: 80vw;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
+
+@media screen and (max-width: 600px) {
+    #games-container {
+        justify-content: center;
+    }
+}
+
 
 .game-img {
     width: 100%;
@@ -51,7 +82,7 @@ body {
 .game-card {
     background-color: #FFFFFF;
     padding: 1%;
-    margin: 1%;
+    margin: 1% 0;
     width: 300px;
     text-align: center;
     border-radius: 7px;
@@ -62,14 +93,35 @@ body {
     box-shadow: 0 0 30px lightblue;
 }
 
-#button-container {
-    text-align: center;
+.games-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    margin: auto;
 }
 
-button {
-    font-family: 'Cabin';
+#button-container {
+    width: 400px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.search input {
+    width: 320px;
+    margin-bottom: 10px;
+}
+
+.search input, button {
+    height: 35px;
     border: none;
-    padding: 1%;
-    margin: 1%;
     border-radius: 7px;
+}
+
+button a {
+    text-decoration: none;
+    color: #0e0101;
 }
